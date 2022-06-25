@@ -4,7 +4,7 @@
 //  console.log(replaceDots("one.two.three")) 
 
 //task 2 2
-function powersOfTwo(n){
+/*function powersOfTwo(n){
     let arr=[];
     for(let i=0; i<=n; i++){
         arr.push(2**i)
@@ -13,4 +13,9 @@ function powersOfTwo(n){
   }
   console.log(powersOfTwo(0))
   console.log(powersOfTwo(1))
-  console.log(powersOfTwo(2))
+  console.log(powersOfTwo(2))*/
+
+  //task 3
+//   function buildString(...template){
+//     return `I like ${template.join(', ')}!`;
+//   }
