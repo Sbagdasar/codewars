@@ -1,1 +1,4 @@
-console.log(122)
+var replaceDots = function(str) {
+    return str.replace(/[.]/g, '-');
+  }
+ console.log(replaceDots("one.two.three")) 
