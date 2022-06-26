@@ -80,13 +80,13 @@ function uncensor(infected, discovered) {
     for (let i = 0; i < infected.length; i++) {
         if(infected[i]!="*"){
             newArr.push(infected[i])
-            console.log(infected[i],'i')
+            //console.log(infected[i],'i')
         }else{
             for (let k = 0; k < discovered.length; k++) {
                 
                 newArr.push(discovered[z])
                 z++
-                console.log(discovered[k],'k')
+                //console.log(discovered[k],'k')
                 break
             }
         }
@@ -98,5 +98,15 @@ function uncensor(infected, discovered) {
 
     return newArr.join('');
   }
-  console.log(uncensor("A**Z*N*", "MAIG"));   
-  console.log("A**Z*N*", "MAIG");   
+//   console.log(uncensor("A**Z*N*", "MAIG"));   
+//   console.log("A**Z*N*", "MAIG");   
+  // best practice
+  function uncensor(infected, discovered) {
+    const arr = [...discovered]
+    console.log(arr);
+    return [...infected].map(el=> el === '*' ? arr.shift() : el).join('')
+  }
+  uncensor("A**Z*N*", "MAIG")
+
+
+  //task 8 https://www.codewars.com/kata/56a5d994ac971f1ac500003e/javascript
