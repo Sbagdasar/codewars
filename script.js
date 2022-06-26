@@ -69,6 +69,34 @@
 var comparator = (a, b) => song.indexOf(a) - song.indexOf(b)
 */
 // task 6
-String.prototype.isUpperCase = function() {
-    return String(this) === this.toUpperCase()
+// String.prototype.isUpperCase = function() {
+//     return String(this) === this.toUpperCase()
+//   }
+
+//task7
+function uncensor(infected, discovered) {
+    let newArr = []
+    let z = 0;
+    for (let i = 0; i < infected.length; i++) {
+        if(infected[i]!="*"){
+            newArr.push(infected[i])
+            console.log(infected[i],'i')
+        }else{
+            for (let k = 0; k < discovered.length; k++) {
+                
+                newArr.push(discovered[z])
+                z++
+                console.log(discovered[k],'k')
+                break
+            }
+        }
+       
+        
+    }
+
+
+
+    return newArr.join('');
   }
+  console.log(uncensor("A**Z*N*", "MAIG"));   
+  console.log("A**Z*N*", "MAIG");   
