@@ -68,3 +68,7 @@
 
 var comparator = (a, b) => song.indexOf(a) - song.indexOf(b)
 */
+// task 6
+String.prototype.isUpperCase = function() {
+    return String(this) === this.toUpperCase()
+  }
