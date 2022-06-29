@@ -111,6 +111,7 @@ function uncensor(infected, discovered) {
 */
 
 
+/*
 //task 8
 const rps = (p1, p2) => {
     if(p1 === 'scissors' && p2 === 'paper'){
@@ -152,4 +153,15 @@ const rps = (p1, p2) => {
     } else {
         return 'Player ' + (map[p1] == p2 ? 1 : 2) + ' won!';
     }
-};
+};*/
+/*
+function expressionMatter(a, b, c) {
+    let arr = []
+    arr.push(a*(b+c))
+    arr.push(a*b*c)
+    arr.push(a+b*c)
+    arr.push((a+b)*c)
+    arr.push(a+b+c)
+    return Math.max(...arr)
+}
+*/
