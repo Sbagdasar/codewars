@@ -74,6 +74,7 @@ var comparator = (a, b) => song.indexOf(a) - song.indexOf(b)
 //   }
 
 //task7
+/*
 function uncensor(infected, discovered) {
     let newArr = []
     let z = 0;
@@ -107,6 +108,24 @@ function uncensor(infected, discovered) {
     return [...infected].map(el=> el === '*' ? arr.shift() : el).join('')
   }
   uncensor("A**Z*N*", "MAIG")
+*/
 
 
-  //task 8 https://www.codewars.com/kata/56a5d994ac971f1ac500003e/javascript
+//task 8
+const rps = (p1, p2) => {
+    if(p1 === 'scissors' && p2 === 'paper'){
+        return "Player 1 won!"
+    }else if(p1 === 'scissors' && p2 === 'rock'){
+        return "Player 2 won!"
+    }else if(p1 === 'paper' && p2 === 'rock'){
+        return "Player 1 won!"
+    }else if(p2 === 'scissors' && p1 === 'paper'){
+        return "Player 2 won!"
+    }else if(p2 === 'scissors' && p1 === 'rock'){
+        return "Player 1 won!"
+    }else if(p2 === 'paper' && p1 === 'rock'){
+        return "Player 2 won!"
+    }else{
+        return "Draw!"
+    }
+};
