@@ -167,8 +167,12 @@ function expressionMatter(a, b, c) {
 */
 function removeSmallest(numbers) {
     let x= Math.min(...numbers)
-    return numbers.filter(el => el!=x)
+let m=numbers.indexOf(x, 0)
+    numbers.splice(m,1)
+    return numbers
+    //numbers.filter(el => el!=x)
     throw "TODO: removeSmallest";
 
 }
 console.log(removeSmallest([1, 2, 3, 4, 5]))
+console.log(removeSmallest([2, 2, 1, 2, 1]))
