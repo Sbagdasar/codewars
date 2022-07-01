@@ -165,3 +165,10 @@ function expressionMatter(a, b, c) {
     return Math.max(...arr)
 }
 */
+function removeSmallest(numbers) {
+    let x= Math.min(...numbers)
+    return numbers.filter(el => el!=x)
+    throw "TODO: removeSmallest";
+
+}
+console.log(removeSmallest([1, 2, 3, 4, 5]))
