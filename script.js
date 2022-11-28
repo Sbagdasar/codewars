@@ -178,7 +178,24 @@ let m=numbers.indexOf(x, 0)
 console.log(removeSmallest([1, 2, 3, 4, 5]))
 console.log(removeSmallest([2, 2, 1, 2, 1]))*/
 
-function getMiddle(s)
-{
-    return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+// function getMiddle(s)
+// {
+//     return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+// }
+
+function nextPal(val) {
+    /* your code here */
+    //11
+    for(let i=val+1; i<=Infinity; i++){
+        let str = (i+'').split('')
+        let strj = str.join('')
+        let strrev = str.reverse().join('')
+        if(strj === strrev && strj != val+''){
+            return i;
+        }
+
+
+    }
 }
+
+nextPal(11)
