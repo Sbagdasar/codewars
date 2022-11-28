@@ -165,6 +165,7 @@ function expressionMatter(a, b, c) {
     return Math.max(...arr)
 }
 */
+/*
 function removeSmallest(numbers) {
     let x= Math.min(...numbers)
 let m=numbers.indexOf(x, 0)
@@ -175,4 +176,5 @@ let m=numbers.indexOf(x, 0)
 
 }
 console.log(removeSmallest([1, 2, 3, 4, 5]))
-console.log(removeSmallest([2, 2, 1, 2, 1]))
+console.log(removeSmallest([2, 2, 1, 2, 1]))*/
+
