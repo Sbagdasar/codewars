@@ -178,3 +178,7 @@ let m=numbers.indexOf(x, 0)
 console.log(removeSmallest([1, 2, 3, 4, 5]))
 console.log(removeSmallest([2, 2, 1, 2, 1]))*/
 
+function getMiddle(s)
+{
+    return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
