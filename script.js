@@ -15,14 +15,14 @@
   console.log(powersOfTwo(1))
   console.log(powersOfTwo(2))*/
 
-  //task 3
+//task 3
 //   function buildString(...template){
 //     return `I like ${template.join(', ')}!`;
 //   }
 // var min = function(list){
 //     let min = list[0];
 //     for (let i = 0; i < list.length; i++) {
-        
+
 //         if(list[i]<=min){
 //             min = list[i]
 //         }
@@ -183,8 +183,9 @@ console.log(removeSmallest([2, 2, 1, 2, 1]))*/
 //     return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
 // }
 
+/*
 function nextPal(val) {
-    /* your code here */
+    /!* your code here *!/
     //11
     for(let i=val+1; i<=Infinity; i++){
         let str = (i+'').split('')
@@ -198,4 +199,55 @@ function nextPal(val) {
     }
 }
 
-nextPal(11)
+nextPal(11)*/
+
+function validISBN10(isbn) {
+    debugger
+    if (isbn.length == 10) {
+        let arr = isbn.split('')//[1,2,3,4,5,6,7,8,9,x]
+        let sum = 0
+
+        for (let i = 0; i <= arr.length - 1; i++) {
+            let x = i + 1
+            if (i <= arr.length - 2 && arr[i] == 'X') {
+                return false
+            }
+            if (arr[arr.length - 1] == 'X') {
+                sum += 10 * x
+            } else {
+                sum += arr[i] * x
+            }
+
+        }
+        if (sum % 11 == 0) {
+            return true
+        } else {
+            return false
+        }
+    } else {
+        return false
+    }
+    // TODO: return true if (and only if) isbn is a valid 10-digit ISBN.
+}
+
+function validISBN10(isbn) {
+    var len = isbn.length;
+
+    if (len !== 10) {
+        return false;
+    }
+
+    return isbn.split('')
+        .map(function (num, index) {
+            return (num === 'X' && index === len - 1 ? 10 : parseInt(num, 10)) * (index + 1);
+        })
+        .reduceRight(function (a, b) {
+            return a + b;
+        }, 0) % 11 === 0;
+}
+
+const validISBN10 = isbn => isbn.length == 10 && isbn.split("").reduce((a, b, i) => a + (((b == "X") && (i == 9)) ? 10 : b) * (i + 1), 0) % 11 == 0;
+
+console.log(validISBN10("X123456788"))
+console.log(validISBN10("XXXXXXXXXX"))
+console.log(validISBN10("048665088X"))
